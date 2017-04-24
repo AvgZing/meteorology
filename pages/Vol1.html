@@ -5,41 +5,21 @@
 <span>
     <h2 class="major">
     Severe Storm Project: <br>Blizzards </h2>
-<p>In this part of the course, you will learn what Blizzards are, how Blizzards occur, where Blizzards occur, how to prepare for a Blizzard, and what you should/should not do while a Blizzard is occurring..</p>
+<p>In this part of the course, you will learn what Blizzards are, how Blizzards form, where Blizzards occur, how to prepare for a Blizzard, and what you should/should not do while a Blizzard is occurring..</p>
 <h3>What is a Blizzard?</h3>
 <pre><code>
 A Blizzard is a severe Snow Storm. The winds are sustained at a speed of 35 miles per hour at a minimum, and it must last for at least 3 hours. 
 The visibility must be a maximum of 0.25 miles in order for it to be a Blizzard as opposed to a Snow Storm. 
 It is more likely for whiteout conditions to occur in a Blizzard, and less likely for there to be a whiteout in a regular Snow Storm.
 </code></pre>
-<h3>How does a Blizzard occur?</h3>
-After the class statement press ENTER key and type
-<pre><code>public function onLoad(){</code></pre>
-<blockquote>If you want a Load Message!</blockquote>
-Press ENTER after the function line and type:
-<pre><code>$this->getLogger()->info("Plugin Loading");</code></pre> You just created a public function and created a load message!
-
-<blockquote>Here is the layout so far, and I hope common sense allows you to understand onEnable and onDisable even though we didn't give you a step by step for them:</blockquote>
-<pre><code>&lt;?php
-
-namespace Inactive-to-Reactive;
-
-use pocketmine\plugin\PluginBase;
-
-class Inactive-to-ReactiveExample extends PluginBase{
-
-          public function onLoad(){
-                    $this->getLogger()->info("Plugin Loading");
-          }
-          public function onEnable(){
-                    $this->getLogger()->info("Enabled Plugin");
-          }
-          public function onDisable(){
-                    $this->getLogger()->info("Plugin Disabled");
-          }
-}</code></pre> Public function onEnable is when your plugin Enables on the Logger or as we all know the CONSOLE. The plugin sends a message to the console on Enable!
-<br><br> Public function on Disable is when your plugin disables on the Logger or as we also know the CONSOLE. The plugin sends a message to the console on Disable!
-<br><br> You have learned the 3 BASIC Functions! Congratulations! <br><br><br>
+<h3>How does a Blizzard form?</h3>
+A Blizzard forms when:
+	<ul>
+		<li>Water vapor in the air has formed clouds</li>
+		<li>There is going to be precipitation</li>
+		<li>The temperature is cold, both on the ground and in the clouds</li>
+		<li>Warm air must be able to rise <b>above</b> the cold air, and that requires adequate lift</li>
+	</ul>
 <h3>Player Events!</h3>
 You know the basics! SO what now? Now we are going to learn about something that makes plugins how they are! Player Events\Events...In this lesson we will be focusing on PlayerJoinEvent and PlayerQuitEvent - Two Major Events!
 
