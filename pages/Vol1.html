@@ -20,85 +20,11 @@ A Blizzard forms when:
 		<li>The temperature is cold, both on the ground and in the clouds</li>
 		<li>Warm air must be able to rise <b>above</b> the cold air, and that requires adequate lift</li>
 	</ul>
-<h3>Player Events!</h3>
-You know the basics! SO what now? Now we are going to learn about something that makes plugins how they are! Player Events\Events...In this lesson we will be focusing on PlayerJoinEvent and PlayerQuitEvent - Two Major Events!
-
-<blockquote>To apply this in your plugin import these USE Statements! Remember "use" statements? import the following:</blockquote>
-<pre><code>// Event when Player Joins
-use pocketmine\event\player\PlayerJoinEvent;
-
-// Event When Player Quits
-use pocketmine\event\player\PlayerQuitEvent;
-
-// Player "class"
-use pocketmine\Player;
-
-// Server "class"
-use pocketmine\Server;
-
-// Event Listener
-use pocketmine\event\Listener;</code></pre>
-
-<blockquote>Since we are using events now, we change the class statement a bit:</blockquote>
-<pre><code>class Inactive-to-ReactiveExample extends PluginBase implements Listener{</code></pre>
-
-<blockquote>For the onEnable() function we add this line right after public function onEnable() (Since we are USING EVENTS!!!)</blockquote>
-<pre><code>public function onEnable(){
-     $this->getServer()->getPluginManager()->registerEvents($this,$this); // THIS LINE
-     $this->getLogger()->info("Plugin Enabled");</code></pre>
-
-<blockquote>Do you want to broadcast a message on the server saying someone joined in a FANCY way? Then we are going to use another function!!! Here:</blockquote>
-<pre><code>public function onJoin(PlayerJoinEvent $event){
-   $player = $event->getPlayer();
-   $name = $player->getName();
-   $this->getServer()->broadcastMessage("$name Joined The Inactive-to-Reactive test Server! Awesome!");
-   </code></pre> Did you know: getPlayer() and getName() are public functions? This is how NEW Functions are made! "onJoin" is a new public function! People who know JavaScript may know this!
-
-<blockquote>Congratulations on getting a Join message, but do you want it in COLOR? Import this "use" statement to your code:</blockquote>
-<pre><code>// Text Format formats text and changes Color
-
-use pocketmine\utils\TextFormat;</code></pre>
-
-<blockquote>Now for your message:</blockquote>
-<pre><code>$this->getServer()->broadcastMessage(TextFormat::GREEN."$name Joined The Inactive-to-Reactive test Server! Awesome!");</code></pre> Now the Color of your message will be Green! NOTE: Instead of using getPlayer() in PlayerDeathEvent, make sure
-you use getEntity() or it will crash your server for everytime someone dies. A LIST of PLAYER events could be found here: <a href="https://github.com/pmmp/PocketMine-MP/tree/master/src/pocketmine/event/player">ClickMeBro</a>
-<br>
-<Br><br>
-<h3> So, we have finally reached the end of the first volume! Let's take a look at what we have! (Spoiler: It's a lot).</h3>
-<pre><code>&lt;?php
-
-namespace Inactive-to-Reactive;
-
-use pocketmine\plugin\PluginBase;
-
-use pocketmine\event\player\PlayerJoinEvent;
-
-use pocketmine\event\player\PlayerQuitEvent;
-
-use pocketmine\Player;
-
-use pocketmine\Server;
-
-use pocketmine\event\Listener;
-
-use pocketmine\utils\TextFormat as C;
-
-class Inactive-to-ReactiveExample extends PluginBase implements Listener{
-
-          public function onLoad(){
-                    $this->getLogger()->info("Plugin Loading");
-          }
-          public function onEnable(){
-                    $this->getServer()->getPluginManager()->registerEvents($this,$this);
-		    $this->getLogger()->info("Enabled Plugin");
-          }
-          public function onDisable(){
-                    $this->getLogger()->info("Plugin Disabled");
-          }
-	  public function onJoin(PlayerJoinEvent $event){
-  		 $player = $event->getPlayer();
-   		$name = $player->getName();
-   		$this->getServer()->broadcastMessage(C::GREEN."$name Joined The Inactive-to-Reactive test Server! Awesome!");
-	}
-}</code></pre>
+<h3>Where do Blizzards occur?</h3>
+In North America, Blizzards mainly occur in:
+	<pre><code>
+The states in Northeastern United States of America
+The provinces of Canada
+The mountains in Western United States of America.
+	</code></pre>
 <button onclick="location.hash='Vol2'">Next Lesson <img style="position: absolute" src="images/next.png"></img></button></span>
