@@ -40,17 +40,17 @@ By (c) Ad5001 2016
                 valid: "2"
             },
             {
-                question: "What is the difference between a Blizzard and a Severe Storm",
+                question: "What is the difference between a Blizzard and a Severe Storm?",
                 a: "A severe comes and goes in less than 3 hours and drops a lot of snow, but a Blizzard lasts longer than 3 hours and also drops a lot of snow.",
                 b: "A Blizard has faster winds, and a Severe storm is slower winds",
                 c: "A severe storm has faster winds, and a Blizzard is slower winds",
                 valid: "1"
             },
             {
-                question: "How to save the plugin config?",
-                a: "$this->getConfig()->reload();",
-                b: "$this->saveConifg();",
-                c: "$this->getConfig()->save();",
+                question: "What should your emergency kit have?",
+                a: "An extra window in case one shatters",
+                b: "Alcohol in case you get thirsty",
+                c: "Wood in case you get cold",
                 valid: "3"
             },
             {
