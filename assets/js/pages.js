@@ -26,24 +26,24 @@ By (c) Ad5001 2016
 */
 
         QandA = [{
-                question: "Where should you put your main file?",
-                a: "In the src folder OR src/Your_Username folder",
-                b: "In the Your_USERNAME/SRC folder",
-                c: "In your resources folder",
-                valid: "1"
-            },
-            {
-                question: "How to log a message on the console?",
-                a: "$this->info('My message');",
-                b: "$this->getLogger()->info(My message);",
-                c: "$this->getLogger()->info('My message');",
+                question: "What are clouds?",
+                a: "Big blobs of white fluffy stuff in the sky",
+                b: "Air that has been condensed into blobs",
+                c: "Visible chunks of condensed water vapor",
                 valid: "3"
             },
             {
-                question: "What is the class for the sender of a command?",
-                a: "\\pocketmine\\command\\CommandSender",
-                b: "\\pocketmine\\command\\CmdSender",
-                c: "\\pocketmine\\Player",
+                question: "Which of the following falls under the category of precipitation?",
+                a: "Sea water",
+                b: "Hail",
+                c: "Dew that formed on the grass",
+                valid: "2"
+            },
+            {
+                question: "What is the difference between a Blizzard and a Severe Storm",
+                a: "A severe comes and goes in less than 3 hours and drops a lot of snow, but a Blizzard lasts longer than 3 hours and also drops a lot of snow.",
+                b: "A Blizard has faster winds, and a Severe storm is slower winds",
+                c: "A severe storm has faster winds, and a Blizzard is slower winds",
                 valid: "1"
             },
             {
