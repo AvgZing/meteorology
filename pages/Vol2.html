@@ -16,57 +16,19 @@
     <li>Rising air tilts the spinning effect from horizontal to vertical, extending through most of the storm</li>
 </ul>
 <blockquote>In the United States, tornadoes tend to form in the Great Plains (found near central USA), and a part of florida bordering the Gulf of Mexico. The area in the Great Plains of Central USA is known as Tornado Alley where cold air from Canada meets the warm air from the Gulf of Mexico. On average nine tornadoes occur each year in Oklahoma and Texas (per 10,000 square miles).</blockquote>
-    <h3>Wanna know EVEN more? Arguments.</h3>
-    Great ! Now that we know how to do "basic" commands, let's make the command <i>even better</i> by allowing the user to choose how many steaks he wants !<br>
-    We'll take a look at a variable that we added without knowing what it was... I talk about the <code>$args</code> variable!<br>
-    It basicly stores every single arguments you use in an array.<br>
-    But how is it stored? Like this: <pre><code>/command &lt;$args[0]&gt; &lt;$args[1]&gt; &lt;$args[2]&gt; &lt;$args[3]&gt; ...</code></pre>
-    Warning: Arrays always starts from 0 !<br>
-    Let's apply this to our code:<br>
-    
-    <pre><code>if($cmd->getName() == "test"){
-     if(!$sender instanceof Player){
-          $sender->sendMessage("This Command Only Works for players! Please perform this command IN GAME!");
-     }else{
-          $sender->getInventory()->addItem(Item::get(364,0,$args[0])); // We choose the first argument as the count !
-          $sender->sendMessage("You have just recieved". count($args[0]) . " steak!");
-     }
-}
-return true;</code></pre> 
-    As you can see, now we can use the /test &lt;steaks number&gt; and it will give us the number of steaks we want!<br>
-    But wait, what if the user doesn't enter the argument? The command won't work !<br>
-    To solve that issue, we need to add a parser to check if no argument "0" was entered, and if that's the case, "creating" it.<br>
-    We'll use function <a href="http://php.net/manual/en/function.isset.php"><code>isset</code></a> which allows us to check if a variable is defined.<br>
-    Let's what this give use in our code !<br>
-    
-    <pre><code>if($cmd->getName() == "test"){
-     if(!$sender instanceof Player){
-          $sender->sendMessage("This Command Only Works for players! Please perform this command IN GAME!");
-     }else{
-          if(!isset($args[0])) { // Check if argument 0 isn't defined.
-                $args[0] = 4; // Defining $args[0] with value 4
-          }
-          $sender->getInventory()->addItem(Item::get(364,0,$args[0]));
-          $sender->sendMessage("You have just recieved" .count($args[0]). " steak!");
-     }
-}
-return true;</code></pre> 
-    Seems already better !<br>
-    But what if the user don't enter a number? And even if it's a number, what if it's negative?<br>
-    We also need to check this in our code! We will use a new function <a href="http://php.net/manual/en/function.is-int.php"><code>is_int</code></a> which will allow us to check if a variable is an integer.<br>
-    
-    <pre><code>if($cmd->getName() == "test"){
-     if(!$sender instanceof Player){
-          $sender->sendMessage("This Command Only Works for players! Please perform this command IN GAME!");
-     }else{
-          if(!isset($args[0]) or (is_int($args[0]) and $args[0] > 0)) { // Check if argument 0 is an integer and is more than 0.
-                $args[0] = 4; // Defining $args[0] with value 4
-          }
-          $sender->getInventory()->addItem(Item::get(364,0,$args[0]));
-          $sender->sendMessage("You have just recieved" .count($args[0]). " steak!");
-     }
-}
-return true;</code></pre> 
-    And that's it ! You made your first command with arguments !
-<br><button onclick="location.hash='Vol3'">Next Lesson <img style="position: absolute" src="images/next.png"></img></button>
-</span>
+    <h3>Let's bust some myths, and prove some facts!</h3>
+    #1: If you live in a big city, a tornado will not hit you.
+    <blockquote>MYTH! In the past, a tornado has hit many big cities, including Dallas, Miami, and Salt Lake city. In addition, a tornado that hits a big city will have more debris than a tornado in the farmland!</blockquote>
+    #2: Tornados have picked people/animals up, and set them down without injury or damage.
+    <blockquote>FACT! Some people and animals have been transported over 1/4 mile without injury! Even glass cups and precious mugs have been picked up and set down without damage</blockquote>
+    #3: A tornado can drive a straw through a telephone pole
+    <blockquote>FACT! While this certainly does sound like a myth, the forces inside a tornado are incredibly powerful and are strong enough to turn small objects into deadly ammunition.</blockquote>
+    #4: If you live in a city surrounded by rivers, there will be no tornadoes because tornados cannot pass over water
+    <blockquote>MYTH! Many tornados have crossed rivers and streams, and they did not lose any speed! While folklore says that the city is immune to tornados, they can be wrong and lead to devastating results.</blockquote>
+    #5: Brick or stone buildings will protect me entirely from a tornado
+    <blockquote>MYTH! The winds of a tornado can cause roofs or walls to cave in. Also, tornadoes can drive many projectiles into the brick, causing damage to the building. But, these buildings offer more protection than most other buildings.</blockquote>
+    #6: Tornadoes can occur during the winter or during the night.
+    <blockquote>FACT! The probability of a tornado occuring is lower at night and during winter, but it is still possible. In the past, there have been tornadoes that caused more death an destruction than any other tornados in that area!</blockquote>
+    #7: Equalize the pressure in your house by opening windows.
+    <blockquote>MYTH! A tornado can easily tear off your roof, or smash a car through your wall, and that will equalize the pressure for you. Don't waste your time!</blockquote>
+ <button onclick="location.hash='Vol3'">Next Lesson</button></span>
