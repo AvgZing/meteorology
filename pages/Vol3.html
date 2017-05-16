@@ -1,54 +1,11 @@
 <!-- Vol3 -->
 
 <span>
-    <h2>Config files !</h2>
-    <hr>
-    Config files can make your plugin one of the most customisablest in the world !<br>
-    But to use a config file, we need multiple things:<br>
-    - A default config file, saved on a resource folder (1)<br>
-    - Saving the config so the user can edit it (2)<br>
-    - Taking data from the config (3)<br>
-    - Setting data to the config (4)<br><br><br><br>
-    
+    <h2 class="major">
+    Climactic Conditions</h2>
+    <p>This is the longest part of the course. In this section, you will learn about El Niño, La Niña, and more. I have made a presentation so that this section does not have an overly long page.</p>
+    <h3>The Presentation</h3>
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container embed-responsive embed-responsive-4by3'><iframe src='https://docs.google.com/presentation/d/1TM6035OotHgtqGMnK0IZkuGVoRy_Lg_nV1_miV-WT6Q/edit?usp=sharing' frameborder='0' allowfullscreen></iframe></div>
 
-    1) Creating a default config:<br>
-    Go to your root plugin folder and create a folder called "resources".<br>
-    Inside of it, create a file "config.yml" and put the default config you want to display to the user.<br>
-    Yaml works like array:<br>
-    <pre><code>
-key: value
-        </code></pre>
-<br><br><br>
-        2) Saving the config when the plugins enables
-    After you succefully made your config, go to your main file and add to your onEnable function:
-    <pre><code>
-$this->saveDefaultConfig(); // Saves config.yml if not created.
-$this->reloadConfig(); // Fix bugs sometimes by getting configs values
-        </code></pre>
-        <br><br><br>
-    3) Taking data from the config<br>
-    If you wanna get the data from your config, add this line:
-    <pre><code>
-$keyFromConfig = $this->getConfig()->get("key"); // This will return the element "key" from the config.
-    </code></pre>
-    Its also a good practive to reload your config before to be sure to get the last user choice.
-    <pre><code>
-$this->reloadConfig();
-    </code></pre>
-    <br><br>
-    4) Setting data to the config.<br>
-    Setting data to the config helps you to save data for games, or to correct wrong values inputed by the user.<br>
-    To set data to the config, add this line to your code when you want to set the data to the config.<br>
-    <pre><code>
-$this->getConfig()->set("key", "example"); // This will set the element "key" of the config.to example.
-    </code></pre>
-    But remember that you need to save the config to apply changes in the file.
-    <pre><code>
-$this->getConfig()->save(); // Saves the config
-    </code></pre>
-
-
-    <!-- TODO: CustomConfig -->
-
-<button onclick="location.hash='Vol4'">Next Lesson <img style="position: absolute" src="images/next.png"></img></button>
+<button onclick="location.hash='Vol4'">Next Lesson</button>
 </span>
