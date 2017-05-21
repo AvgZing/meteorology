@@ -1,6 +1,6 @@
 /* 
 Page downloader & switcher to make code cleaner.
-By (c) Ad5001 2016
+By (c) Ad5001 2017
 */
 
 articles = document.getElementsByTagName("article");
@@ -17,12 +17,12 @@ for (i = 0; i < articles.length; i++) {
 
 
 function setPage(text) {
-    page = text.substr(5).split(" -->")[0]; // Temporary working solution
+    page = text.substr(5).split(" -->")[0];
     document.getElementById(page).innerHTML = text + '<div class="close" onclick="location.hash=\'\';">Close</div>';
     if (page == "quiz") {
         /*
 Quiz maker
-By (c) Ad5001 2016
+By (c) Ad5001 2017
 */
 
         QandA = [{
@@ -54,11 +54,46 @@ By (c) Ad5001 2016
                 valid: "3"
             },
             {
-                question: "How much is a tick?",
-                a: "20 ticks = 1/20 of a second",
-                b: "20 ticks = 1 second",
-                c: "20 ticks = 20 seconds",
+                question: "What is El Nino?",
+                a: "Cooler ocean waters in the Central/Eastern part of the Pacific ocean",
+                b: "Warmer ocean waters in the Central/Eastern part of the Pacific ocean",
+                c: "Cooler ocean waters in the Northern/Western part of the Pacific ocean",
                 valid: "2"
+            },
+            {
+                question: "What is La Nina?",
+                a: "Cooler ocean waters in the Central/Eastern part of the Pacific ocean",
+                b: "Warmer ocean waters in the Central/Eastern part of the Pacific ocean",
+                c: "Cooler ocean waters in the Northern/Western part of the Pacific ocean",
+                valid: "1"
+            },
+            {
+                question: "What is Convection?",
+                a: "The heat transfer between two touching bodies",
+                b: "A heat transfer method that does not rely on contact",
+                c: "The transfer of heat throughout a substance",
+                valid: "3"
+            },
+            {
+                question: "True or false: Water heats up faster than land and water cools down slower than land",
+                a: "True",
+                b: "False",
+                c: "Partially true, partially false",
+                valid: "3"
+            },
+            {
+                question: "True or false: Water cools down slower than land, and land heats up faster than water.?",
+                a: "True",
+                b: "False",
+                c: "Partially true, partially false",
+                valid: "1"
+            },
+            {
+                question: "If the building that you are in does not have a basement during a tornado, where should you go?",
+                a: "Go to a floor in the middle of the building, and take shelter there",
+                b: "A hallway anywhere in the building",
+                c: "A room in the middle of the bottom floor with no windows",
+                valid: "3"
             },
         ]
 
@@ -83,13 +118,14 @@ function quizValidate(num) {
     }
     if (num == QandA[quizStep].valid) {
         score++;
-        answers[num - 1].style.backgroundColor = "lime";
+        answers[num - 1].style.backgroundColor = "springgreen";
     } else {
         answers[num - 1].style.backgroundColor = "red";
+        QandA[quizStep].valid.style.backgroundColor = "orange";
     }
     setTimeout(function() {
         nextQuestion();
-        answers[num - 1].style.backgroundColor = "lightgray";
+        answers[num - 1].style.backgroundColor = "lightskyblue";
     }, 2000);
 }
 
