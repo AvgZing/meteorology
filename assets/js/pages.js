@@ -121,7 +121,6 @@ function quizValidate(num) {
         answers[num - 1].style.backgroundColor = "springgreen";
     } else {
         answers[num - 1].style.backgroundColor = "red";
-        QandA[quizStep].valid.style.backgroundColor = "orange";
     }
     setTimeout(function() {
         nextQuestion();
