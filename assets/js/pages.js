@@ -1,6 +1,6 @@
 /* 
 Page downloader & switcher to make code cleaner.
-By (c) Ad5001 2017
+By (c) Ad5001 2016
 */
 
 articles = document.getElementsByTagName("article");
@@ -17,12 +17,12 @@ for (i = 0; i < articles.length; i++) {
 
 
 function setPage(text) {
-    page = text.substr(5).split(" -->")[0];
+    page = text.substr(5).split(" -->")[0]; // Temporary working solution
     document.getElementById(page).innerHTML = text + '<div class="close" onclick="location.hash=\'\';">Close</div>';
     if (page == "quiz") {
         /*
 Quiz maker
-By (c) Ad5001 2017
+By (c) Ad5001 2016
 */
 
         QandA = [{
@@ -118,7 +118,7 @@ function quizValidate(num) {
     }
     if (num == QandA[quizStep].valid) {
         score++;
-        answers[num - 1].style.backgroundColor = "springgreen";
+        answers[num - 1].style.backgroundColor = "lime";
     } else {
         answers[num - 1].style.backgroundColor = "red";
     }
