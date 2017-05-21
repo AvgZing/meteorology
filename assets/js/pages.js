@@ -124,7 +124,7 @@ function quizValidate(num) {
     }
     setTimeout(function() {
         nextQuestion();
-        answers[num - 1].style.backgroundColor = "lightgrey";
+        answers[num - 1].style.backgroundColor = "lightgray";
     }, 2000);
 }
 
