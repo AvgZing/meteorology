@@ -121,11 +121,10 @@ function quizValidate(num) {
         answers[num - 1].style.backgroundColor = "springgreen";
     } else {
         answers[num - 1].style.backgroundColor = "red";
-        valid.style.backgroundColor = "orange";
     }
     setTimeout(function() {
         nextQuestion();
-        answers[num - 1].style.backgroundColor = "lightskyblue";
+        answers[num - 1].style.backgroundColor = "lightgrey";
     }, 2000);
 }
 
